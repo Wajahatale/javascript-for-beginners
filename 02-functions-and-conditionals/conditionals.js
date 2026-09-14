@@ -58,7 +58,7 @@ if (!isOnTime){ //Not condition !
     console.log("You are late");
 }
 
-// Because return exists immediately, you ofter don't need else at all.
+// Because return exits immediately, you often don't need else at all.
 function checkGrade(score){
     if(score >= 90) return "A";
     if(score >= 80) return "B";
