@@ -4,6 +4,8 @@ Code from the **JavaScript for Beginners** video series. Every file here is writ
 
 No frameworks. No build tools. No npm packages. Just JavaScript.
 
+Every concept is commented inline, so these files double as your notes.
+
 ---
 
 ## Who this is for
@@ -70,7 +72,34 @@ node variables.js
 
 ---
 
+### 02 — Functions and Conditionals
+`02-functions-and-conditionals/`
+
+Writing code once and reusing it, then teaching it to make decisions. Covers the two things that trip up almost every beginner: `return` vs `console.log`, and `===` vs `==`.
+
+| File | What it is |
+|---|---|
+| `functions.js` | Defining vs calling, parameters, `return` vs `console.log` |
+| `conditionals.js` | `if` / `else` / `else if`, comparison operators, `&&` `\|\|` `!` |
+
+**Run them:**
+
+```bash
+cd 02-functions-and-conditionals
+node functions.js
+node conditionals.js
+```
+
+**Two things worth re-reading if something isn't clicking:**
+
+- `console.log` prints a value for a person to read, then it's gone. `return` hands a value back to your code so it can keep using it. If you get `undefined` where you expected a result, this is almost always why.
+- Always use `===`, never `==`. Double equals converts types before comparing, so `5 == "5"` is `true` — which is rarely what you want and has caused an enormous amount of real bugs.
+
+---
+
 *More episodes will be added here as they're published.*
+
+**Coming next — 03: Build a Number Guessing Game.** A full project from scratch using nothing beyond episodes 1 and 2.
 
 ---
 
@@ -78,13 +107,22 @@ node variables.js
 
 Each episode ends with exercises. Try them before looking at anything else — typing code that doesn't work yet is how this actually sticks.
 
-**Episode 1**
+### Episode 1
 
 1. Add a second button that resets the counter to zero
 2. Change the heading to display your own name
 3. Break something on purpose, read the error, then fix it
 
 Number three matters most. Errors are the language telling you exactly what's wrong and on which line. Getting comfortable reading them now will save you months later.
+
+### Episode 2
+
+1. Write `calculateDiscount(price, percent)` that **returns** the final price
+2. Write a function that takes a temperature and returns `"hot"`, `"mild"`, or `"cold"`
+3. Change one `===` to `==` somewhere and see if you can make it give a wrong answer
+4. Swap a `return` for a `console.log`, then try to use the result
+
+Numbers three and four take ten seconds each and will save you an hour later. Breaking something deliberately teaches you more than building it cleanly.
 
 Solutions live in `solutions/` — open them after you've made an honest attempt.
 
@@ -95,6 +133,8 @@ Solutions live in `solutions/` — open them after you've made an honest attempt
 - **Something won't run?** Check you're in the right folder. `cd` into the episode directory first.
 - **`node` not recognised?** Reopen your terminal. If that fails, reinstall Node and tick "Add to PATH".
 - **Live Server does nothing?** Make sure you right-clicked the `.html` file, not the `.js` file.
+- **Getting `undefined` back from a function?** You almost certainly used `console.log` where you needed `return`. See episode 2.
+- **A comparison giving the wrong answer?** Check you're using `===` and not `==`.
 - **Still stuck?** Open an [issue](../../issues) with the error message and which episode you're on. Someone else has almost certainly hit the same thing.
 
 ---
